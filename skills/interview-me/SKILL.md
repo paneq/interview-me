@@ -26,6 +26,11 @@ Walk down each branch of the decision tree, resolving dependencies between decis
 8. **Before each question, explain the problem, then the context around it, then your recommended
    answer, in plain words.** In the conversation, refer to a decision by what it says, never by its
    number in the living document ("D7"). Nobody remembers what D7 was.
+9. **Before putting a design choice to me, check whether the codebase already settled it.** An
+   established mechanism for the same problem, such as a shared helper, a convention, or the pattern
+   the neighbouring code uses, is a fact, not an open decision. Follow it and tell me which one it
+   is. Ask only when nothing covers the case, or when you think the established way is wrong, and
+   then say why.
 
 ## Presenting context
 
