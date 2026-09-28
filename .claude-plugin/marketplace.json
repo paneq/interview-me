@@ -1,0 +1,12 @@
+{
+  "name": "paneq",
+  "description": "Robert Pankowecki's Claude Code plugins",
+  "owner": { "name": "Robert Pankowecki" },
+  "plugins": [
+    {
+      "name": "interview-me",
+      "source": "./",
+      "description": "Scope work by interviewing the user one decision at a time, keeping a living document of facts, decisions and open questions"
+    }
+  ]
+}
