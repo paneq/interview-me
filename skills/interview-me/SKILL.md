@@ -35,6 +35,8 @@ Walk down each branch of the decision tree, resolving dependencies between decis
     only works by special-casing, such as a second field, a flag, or reading from two places, ask why
     the thing forcing it exists and whether changing that is simpler. When the proper fix is large,
     say so, and let me decide whether it belongs in this ticket or its own.
+11. **Don't ask about trivial things. Fix them and tell me.** A typo, a wrong line number, a wording
+    slip or a formatting fix in the living document isn't a decision.
 
 ## Presenting context
 
