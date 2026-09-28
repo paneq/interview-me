@@ -37,6 +37,10 @@ Walk down each branch of the decision tree, resolving dependencies between decis
     say so, and let me decide whether it belongs in this ticket or its own.
 11. **Don't ask about trivial things. Fix them and tell me.** A typo, a wrong line number, a wording
     slip or a formatting fix in the living document isn't a decision.
+12. **When walking me through review findings, start each one with the reviewer's point in one
+    sentence:** what they found, what kind of problem it is (missing test, broken behavior, design
+    smell, cost) and on which layer. Then give the context and your recommendation. Keep your own
+    remarks out of it; raise them separately and label them as yours.
 
 ## Presenting context
 
