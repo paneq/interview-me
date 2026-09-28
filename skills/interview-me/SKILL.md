@@ -26,3 +26,30 @@ Walk down each branch of the decision tree, resolving dependencies between decis
 8. **Before each question, explain the problem, then the context around it, then your recommended
    answer, in plain words.** In the conversation, refer to a decision by what it says, never by its
    number in the living document ("D7"). Nobody remembers what D7 was.
+
+## Presenting context
+
+Pick the smallest view that makes the point, and put it next to the short text it supports.
+
+- **Say where every symbol lives.** Never a bare method, type or field name: give its package or
+  crate, its file, and the layer it belongs to. Stay on one layer per explanation, and present an
+  API question in API terms, not as UI behavior.
+- **Show code with its surroundings, never a single line.** Quote the enclosing function or struct,
+  or enough lines to show what the line sits inside, or summarize the block as pseudo-code with the
+  key line marked. Show the whole block when leaving parts out would hide ownership or order.
+- **Draw how things flow** as a call tree, each node with its location and layer:
+
+  ```text
+  submitForm              web/src/forms/submit.ts      UI
+    createSession         api/src/sessions/create.rs   API
+      persistPrompt       api/src/db/prompts.rs        database
+  ```
+
+  Use a sequence diagram (text, or Mermaid where it renders) when several parties exchange messages.
+- **Mark what changes with `+` / `-`** on the tree, struct or schema that exists today, so the
+  present and the proposal read side by side.
+- **Give the smallest concrete example** of the problem: the input that triggers it and what comes out.
+- **Say what kind of problem it is:** broken behavior, a missing test, a design smell, a cost.
+- **Use the codebase's words and mine.** Never introduce a term of your own without defining it.
+- **Keep prose short.** When I say I'm lost, don't add more prose: show the one thing I asked about,
+  with its location and surroundings.
