@@ -31,6 +31,10 @@ Walk down each branch of the decision tree, resolving dependencies between decis
    the neighbouring code uses, is a fact, not an open decision. Follow it and tell me which one it
    is. Ask only when nothing covers the case, or when you think the established way is wrong, and
    then say why.
+10. **When a proposal needs a workaround, find the root cause before recommending it.** If a design
+    only works by special-casing, such as a second field, a flag, or reading from two places, ask why
+    the thing forcing it exists and whether changing that is simpler. When the proper fix is large,
+    say so, and let me decide whether it belongs in this ticket or its own.
 
 ## Presenting context
 
