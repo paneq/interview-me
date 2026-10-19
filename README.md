@@ -3,7 +3,8 @@
 A Claude Code skill for scoping work before any of it is done. The agent interviews you one decision
 at a time, with its recommended answer for each, looks facts up itself instead of asking you, and
 keeps a living document of facts, decisions and open questions until you agree you share an
-understanding.
+understanding. For a code change, it also makes sure the interview covers the DB, service and API
+layers, testing, implementation order, feature toggles and the PR split.
 
 ## Install
 

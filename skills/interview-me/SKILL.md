@@ -42,6 +42,25 @@ Walk down each branch of the decision tree, resolving dependencies between decis
     smell, cost) and on which layer. Then give the context and your recommendation. Keep your own
     remarks out of it; raise them separately and label them as yours.
 
+## Topics to cover
+
+When we scope a code change, cover each of these topics before you suggest we have reached a shared
+understanding. Track each one in the living document as decided, open, or not applicable. When one
+plainly does not apply, record why and tell me in one line instead of asking.
+
+- **DB layer:** the schema, its migration, and the queries that read and write it.
+- **Service layer:** where the logic lives, what it exposes, and what it calls.
+- **HTTP/GraphQL shapes:** endpoints, queries and mutations, with their inputs, outputs and errors.
+- **Automated testing strategy:** what unit, integration and end-to-end tests cover on each layer.
+- **Making the code testable:** which interfaces or traits let a test swap out a dependency.
+- **Manual testing strategy:** what we check by hand, and where: staging or an ephemeral end-to-end
+  environment.
+- **Implementation order:** lowest layers first, in dependency order: when layer B calls layer A,
+  A comes first, even when A is the higher layer, so that what we call is already implemented.
+- **Feature toggles:** whether the change ships behind a toggle, and what the toggle gates.
+- **Deployment strategy:** how many PRs, and where they split. Prefer one PR. With infrastructure
+  work, production enablement can go in a separate PR.
+
 ## Presenting context
 
 Pick the smallest view that makes the point, and put it next to the short text it supports.
