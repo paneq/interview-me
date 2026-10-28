@@ -41,6 +41,10 @@ Walk down each branch of the decision tree, resolving dependencies between decis
     sentence:** what they found, what kind of problem it is (missing test, broken behavior, design
     smell, cost) and on which layer. Then give the context and your recommendation. Keep your own
     remarks out of it; raise them separately and label them as yours.
+13. **Never estimate how long anything will take.** When you weigh options or call a fix large, size
+    it by what it changes: the layers, files, migrations or tests it touches. Never put it in hours
+    or days. I never ask for durations, and yours are guesses: what takes a person an hour may take
+    you a minute.
 
 ## Topics to cover
 
